@@ -1,0 +1,73 @@
+[package]
+name = "rust-wasm-canvas-example"
+description = "Using WASM to draw fractals using Canvas API"
+version = "1.0.0"
+authors = ["minagawa <minag@tokyo800.jp>"]
+categories = ["wasm"]
+repository = "https://github.com/minagawah/rust-wasm-canvas-example.git"
+license = "Unlicense or MIT"
+readme = "README.md"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# async-std = { version = "1.5", features = ["attributes"] }
+callback-future = "0.1.0"
+# chrono = { version = "0.4.22", features = ["serde"] }
+console_error_panic_hook = "0.1.7"
+# console_log = "^0.2"
+console_log = "1.0.0"
+# futures = "0.3.23"
+futures = "0.3.30"
+hex = "0.4.3"
+# js-sys = "0.3.58"
+js-sys = "0.3.69"
+# noise = "0.7.0"
+# lerp = "0.4.0"
+# num = "0.4.0"
+num = "0.4.3"
+# serde = { version = "1.0.140", features = ["derive"] }
+# serde-wasm-bindgen = "0.4"
+serde = { version = "1.0.204", features = ["derive"] }
+serde-wasm-bindgen = "0.6.5"
+# tokio = { version = "1.14", features = ["sync"] }
+# wasm-bindgen = { version = "0.2.82", features = ["serde-serialize"] }
+wasm-bindgen = "0.2.92"
+# wasm-bindgen-futures = "0.4.32"
+wasm-bindgen-futures = "0.4.42"
+wasm-timer = "0.2.5"
+
+# [dependencies.rand]
+# version = "0.7.3"
+# features = ["wasm-bindgen"]
+
+[dependencies.web-sys]
+# version = "0.3.61"
+version = "0.3.69"
+features = [
+  'console',
+#   # 'CssStyleDeclaration',
+   'CanvasRenderingContext2d',
+   'Document',
+   'DomRect',
+   'Element',
+#   'Headers',
+   'HtmlCanvasElement',
+   'HtmlElement',
+   'Node',
+#   # 'Request',
+#   # 'RequestInit',
+#   # 'RequestMode',
+#   # 'Response',
+#   # 'TextMetrics',
+   'Window',
+]
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"
+# This makes the compiled code faster and smaller, but it makes
+# compiling slower, so it's only enabled in release mode.
+lto = true
