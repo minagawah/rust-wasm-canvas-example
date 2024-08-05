@@ -2,7 +2,7 @@
   "name": "rust-wasm-canvas-example",
   "version": "1.0.0",
   "private": false,
-  "description": "Using WASM to draw fractals using Canvas API ",
+  "description": "Rust WASM example managing Canvas API ",
   "main": "dist/index.html",
   "scripts": {
     "clean:js": "rimraf dist",
@@ -21,8 +21,7 @@
     "wasm-pack",
     "web-sys",
     "wasm-bindgen",
-    "Canvas API",
-    "fractals"
+    "Canvas API"
   ],
   "author": "minagawah <minag@tokyo800.jp>",
   "license": "(Unlicense OR MIT)",

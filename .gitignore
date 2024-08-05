@@ -89,7 +89,7 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-####################dist
+dist
 
 # Gatsby files
 .cache/
@@ -146,7 +146,5 @@ Cargo.lock
 
 # For all the app specific ignore files and folders
 .DS_Store
-/target
-/dist
 /wasm-pack.log
 package-lock.json
